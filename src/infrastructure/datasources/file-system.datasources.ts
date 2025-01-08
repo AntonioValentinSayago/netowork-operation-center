@@ -27,8 +27,16 @@ export class FileSystemDatasource implements LogDataSource{
         });
     }
 
-    saveLog(log: LogEntity): Promise<void> {
-        throw new Error("Method not implemented.");
+    async saveLog(newlog: LogEntity): Promise<void> {
+
+        const logAsJson = `${ JSON.stringify(newlog) }\n `;
+        fs.appendFileSync( this.allLogsPath, logAsJson )
+        if( newlog.level === LogSeverityLevel.low ) return;
+        if( newlog.level === LogSeverityLevel.medium ) {
+            fs.appendFileSync( this.mediumLogsPath, logAsJson )
+        } else{
+            fs.appendFileSync( this.hightLogsPath, logAsJson )
+        }
     }
     getLog(severityLevel: LogSeverityLevel): Promise<LogEntity[]> {
         throw new Error("Method not implemented.");
