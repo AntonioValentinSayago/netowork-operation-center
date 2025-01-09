@@ -27,6 +27,8 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "cron": "^3.3.2"
+    "cron": "^3.3.2",
+    "dotenv": "^16.4.7",
+    "env-var": "^7.5.0"
   }
 }
