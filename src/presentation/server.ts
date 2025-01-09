@@ -15,12 +15,12 @@ export class Server {
             () => {
                 // const date = new Date()
                 // console.log(`You will see this message ${date} second`);
-                // --> const url = 'https://google.com';
+                // --> const url = '';
                 new CheckService(
                     fileSystemlogRepository,
                     () => console.log('success'),
                     ( error ) => console.log(error)
-                ).execute( 'http://localhost:3000' )
+                ).execute( 'https://www.youtube.com/' )
             }
         )
     }
