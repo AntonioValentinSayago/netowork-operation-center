@@ -29,6 +29,7 @@
   "dependencies": {
     "cron": "^3.3.2",
     "dotenv": "^16.4.7",
-    "env-var": "^7.5.0"
+    "env-var": "^7.5.0",
+    "nodemailer": "^6.9.16"
   }
 }
