@@ -1,5 +1,5 @@
 
-# Network Operation Center 1.0.2
+# Network Operation Center 1.0.3
 
 Aplicación construida en React, la cual consume un servicio de Api de la plataforma "GIPHY Developers"
 
